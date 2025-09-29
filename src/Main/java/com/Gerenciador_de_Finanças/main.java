@@ -1,7 +1,5 @@
 package Main.java.com.Gerenciador_de_Finanças;
-
 import Main.java.com.Gerenciador_de_Finanças.model.Usuarios;
-
 import java.util.Scanner;
 
 public class main {
@@ -27,6 +25,7 @@ public class main {
                 continue;
             }
 
+            scanner.nextLine();
             switch (opcao) {
                 case 1: {
                     System.out.println("--------------------");
