@@ -4,13 +4,13 @@ import Main.java.com.Gerenciador_de_Finanças.model.Usuarios;
 
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean codicao = true;
-        Usuarios nome1 = new Usuarios();
+        boolean condicao = true;
+        Usuarios usuarios = null;
 
-        while (codicao) {
+        while (condicao) {
             System.out.print("Opções:" +
                     "\n1 - Cadastro " +
                     "\n2 - Login" +
@@ -18,10 +18,11 @@ public class main {
                     "\n0 - Sair" +
                     "\nOpção Escolhida: ");
             int opcao = scanner.nextInt();
+            scanner.nextLine();
 
             if (opcao == 0) {
                 System.out.println("Encerrando....");
-                codicao = false;
+                condicao = false;
             } else if (opcao > 3 || opcao < 0) {
                 System.out.println("Opção Incorreta, Tente novamente!");
                 continue;
@@ -40,7 +41,7 @@ public class main {
                     System.out.print("Senha: ");
                     String senha = scanner.nextLine();
 
-                    nome1.cadastro(nome, email, senha);
+                    /*usuarios.adicionarConta(nome, email, senha);*/
                     break;
                 }
                 case 2:
@@ -51,8 +52,8 @@ public class main {
                 case 3:
                     System.out.println("-----------");
                     System.out.println(" Usuário Cadastrados ");
-                    System.out.println("Nome: " + nome1.getNome());
-                    System.out.println("Email: " + nome1.getEmail());
+                    System.out.println("Nome: " + usuarios.getNome());
+                    System.out.println("Email: " + usuarios.getEmail());
                     System.out.println("Senha: " + "************");
                     break;
 

@@ -5,6 +5,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
+
 public class Usuarios {
 
     private String nome;
@@ -23,10 +24,6 @@ public class Usuarios {
     public String getNome() {
         return nome;
     }
-
-    /*public String getSenha() {
-        return senha;
-    }*/
 
     public String getEmail() {
         return email;
@@ -67,7 +64,6 @@ public class Usuarios {
         return "Usuarios: "+
                 "\nnome='" + nome + '\'' +
                 ", \nemail='" + email + '\'' +
-                //", \nsenha='" + senha + '\'' +
                 ", \ncontas=" + contas +
                 '}';
     }
